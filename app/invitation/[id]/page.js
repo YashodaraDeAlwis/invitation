@@ -132,7 +132,7 @@ Mr. Darmadasa Rajapaksha & Mrs. Dayantha priyangani
       {/* Text */}
       <div className="absolute inset-0 flex items-center  text-white  pt-5">
         <div>
-          <h1 className=" sm:text-xl text-[5px] pb-5 sm:pr-50 normal-case px-16 justify-center text-center">
+          <h1 className=" sm:text-xl text-[7px] pb-5 sm:pr-50 normal-case px-16 justify-center text-center">
             Welcome to our wedding website! We've created this site as a
             convenient and interactive way to share all of the important
             details with you leading up to our wedding. We can't wait to
@@ -154,12 +154,12 @@ Mr. Darmadasa Rajapaksha & Mrs. Dayantha priyangani
 
       
     </div>
-    <div className="sm:pr-5 pr-2 pl-2 sm:text-lg text-[5px] pt-3 flex justify-center lowercase">
+    <div className="sm:pr-5 pr-2 pl-2 sm:text-lg text-[7px] pt-2 pb-5 flex justify-center lowercase">
           <a
             href="https://www.google.com/maps/dir//8R2R%2B42X,+Kammala+Rd,+Kammala/@7.3003554,79.7577163,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ae2e997a664e917:0x8177657b30a5aaaa!2m2!1d79.840144!2d7.3003702?entry=ttu"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline  hover:text-blue-800"
+            className="underline  hover:text-orange-600"
           >
             View on Google Maps
           </a>
