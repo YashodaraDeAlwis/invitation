@@ -124,7 +124,7 @@ Mr. Darmadasa Rajapaksha & Mrs. Dayantha priyangani
       {/* Image */}
       <img
         className=" w-full "
-        src="/images/background.jpg"
+        src="/images/background.JPG"
         alt="landing image"
       />
       {/* Overlay */} 
