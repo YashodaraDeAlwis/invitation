@@ -11,14 +11,14 @@ export async function generateMetadata({ params, searchParams }, parent) {
   const id = params.id;
   const inv = await fetchData(id);
 
-  const title = `Invitation title | ${inv.data.invitor_name_for_card}`;
-  const description = `Invitation description | ${inv.data.invitor_name_for_card}`;
+  const title = `Save the date | ${inv.data.invitor_name_for_card}`;
+  const description = `Yashodara & Harshana Wedding Invitation  | ${inv.data.invitor_name_for_card}`;
 
   return {
     title,
     description,
     openGraph: {
-      images: ["http://localhost:3000/images/next.svg"],
+      images: ["http://localhost:3000/images/h.png"],
     },
   };
 }
