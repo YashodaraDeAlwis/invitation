@@ -29,8 +29,13 @@ export default function FormDialog() {
         const response = await axios.get(
           "https://91htv6ktm9.execute-api.us-east-1.amazonaws.com/dev/invitation/a3768607-75fd-4d77-a591-5b3b80de88c1"
         );
+
         console.log(response.data)
         setData(response.data);
+       
+        setMainStatus(response.data.data.invitor_main_name.rspv_status);
+        setStatus(response.data.data.other_invitor[0].rspv_status);
+        
       } catch (error) {
         console.error(error);
       }
@@ -43,26 +48,30 @@ export default function FormDialog() {
     e.preventDefault(); //prevent refreshing while submitting
     setIsPending(true);
 
-    const updatedData = {
-      invitation_id: "665de4535c1bbad6a691a3cd",
-      invitation_count: 3,
-      invitor_name_for_card: "Aminda aiya and Bavi akka",
-      invitor_main_name: {
-        invitor_id: "665de4535c1bbad6a691a3cb",
-        invitor_name: "Aminda aiya",
-        rspv_status: mainStatus,
-        invitor_type: "main",
-      },
-      other_invitor: [
-        {
-          invitor_id: "665de4535c1bbad6a691a3cc",
-          invitor_name: "Bavi akka",
-          rspv_status: status,
-          invitor_type: "sub",
-        },
+    const updatedData = data.data
+    updatedData.invitor_main_name.rspv_status = mainStatus
+    updatedData.other_invitor[0].rspv_status = status
+
+    // const updatedData = {
+    //   invitation_id: "665de4535c1bbad6a691a3cd",
+    //   invitation_count: 3,
+    //   invitor_name_for_card: "Aminda aiya and Bavi akka",
+    //   invitor_main_name: {
+    //     invitor_id: "665de4535c1bbad6a691a3cb",
+    //     invitor_name: "Aminda aiya",
+    //     rspv_status: mainStatus,
+    //     invitor_type: "main",
+    //   },
+    //   other_invitor: [
+    //     {
+    //       invitor_id: "665de4535c1bbad6a691a3cc",
+    //       invitor_name: "Bavi akka",
+    //       rspv_status: status,
+    //       invitor_type: "sub",
+    //     },
       
-      ],
-    };
+    //   ],
+    // };
 
     const headers = {
       "Content-Type": "application/json", // Example header
