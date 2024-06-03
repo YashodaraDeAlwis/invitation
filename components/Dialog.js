@@ -44,28 +44,23 @@ export default function FormDialog() {
     setIsPending(true);
 
     const updatedData = {
-      invitation_id: "66269f7578894d433a637db2",
+      invitation_id: "665de4535c1bbad6a691a3cd",
       invitation_count: 3,
-      invitor_name_for_card: "Mr. Harshana afa",
+      invitor_name_for_card: "Aminda aiya and Bavi akka",
       invitor_main_name: {
-        invitor_id: "66260b9778894d433a637dae",
-        invitor_name: "Nuwan",
+        invitor_id: "665de4535c1bbad6a691a3cb",
+        invitor_name: "Aminda aiya",
         rspv_status: mainStatus,
         invitor_type: "main",
       },
       other_invitor: [
         {
-          invitor_id: "66269f7578894d433a637db0",
-          invitor_name: "Nuwani Herath d",
+          invitor_id: "665de4535c1bbad6a691a3cc",
+          invitor_name: "Bavi akka",
           rspv_status: status,
           invitor_type: "sub",
         },
-        {
-          invitor_id: "66269f7578894d433a637db1",
-          invitor_name: "Keshannn Senarath f",
-          rspv_status: status,
-          invitor_type: "sub",
-        },
+      
       ],
     };
 
@@ -75,7 +70,7 @@ export default function FormDialog() {
     };
     axios
       .put(
-        "https://91htv6ktm9.execute-api.us-east-1.amazonaws.com/dev/invitation/66269f7578894d433a637db2",
+        "https://91htv6ktm9.execute-api.us-east-1.amazonaws.com/dev/invitation/665de4535c1bbad6a691a3cd",
         updatedData,
         { headers }
       )

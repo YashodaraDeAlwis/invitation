@@ -13,7 +13,7 @@ module.exports = {
        
       },
       backgroundImage: {
-        'texture': "url('/images/test1.png')",
+        'texture': "url('/images/test1.png') opacity-10",
       },
       colors: {
         primary: {
