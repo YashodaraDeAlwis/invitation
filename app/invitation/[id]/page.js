@@ -19,7 +19,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     title,
     description,
     openGraph: {
-      images: ["http://localhost:3000/images/h.png"],
+      images: ["http://localhost:3000/images/ogImage.png"],
     },
   };
 }
