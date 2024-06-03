@@ -32,7 +32,7 @@ export default async function Page({ params: { id } }) {
     //   <Example />
     // </div>
 
-    <div className="font-gilda-display relative uppercase bg-texture bg-cover bg-fixed bg-opacity-30">
+    <div className="font-gilda-display  uppercase bg-texture bg-cover bg-fixed bg-opacity-50">
     <link
           href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Gilda+Display&display=swap"
           rel="stylesheet"
