@@ -1,4 +1,5 @@
-import Example from "@/components/Dialog";
+import FormDialog from "@/components/Dialog";
+
 
 async function fetchData(id) {
   const inv = await fetch(
@@ -109,7 +110,7 @@ Mr. Darmadasa Rajapaksha & Mrs. Dayantha priyangani
           togetherness
         </h1>
 
-      {/* <FormDialog /> */}
+    <FormDialog/>
     </div>
     <div className="flex flex-col items-center">
       <h1 className="sm:text-3xl text-md sm:pt-10  pb-3 font-dancing-script ">
