@@ -55,7 +55,7 @@ export default async function Page({ params: { id } }) {
             <div className=" sm:w-44 w-14 bg-slate-400 h-0.5  "></div>
           </div>
           <div className="text-[10px] pt-5  sm:text-xl uppercase flex justify-center">
-            30 Days to go!
+            22 Days to go!
           </div>
         </div>
         <div className="text-[12px] pt-10 sm:pt-16  sm:text-4xl flex justify-center   tracking-[.25em]">
