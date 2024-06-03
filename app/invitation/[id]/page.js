@@ -27,7 +27,7 @@ export default async function Page({ params: { id } }) {
   const { data } = await fetchData(id);
 
   return (
-    <div className="font-gilda-display  uppercase bg-texture bg-cover bg-fixed bg-opacity-50">
+    <div className="font-gilda-display  flex flex-col justify-center items-center h-screen   uppercase bg-texture bg-cover bg-fixed bg-opacity-50">
       <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Gilda+Display&display=swap"
         rel="stylesheet"
@@ -54,7 +54,7 @@ export default async function Page({ params: { id } }) {
             {" "}
             <div className=" sm:w-44 w-14 bg-slate-400 h-0.5  "></div>
           </div>
-          <div className="text-[12px] pt-5  sm:text-xl uppercase flex justify-center">
+          <div className="text-[10px] pt-5  sm:text-xl uppercase flex justify-center">
             30 Days to go!
           </div>
         </div>
