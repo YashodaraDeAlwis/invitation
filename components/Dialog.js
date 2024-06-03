@@ -27,8 +27,9 @@ export default function FormDialog() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://91htv6ktm9.execute-api.us-east-1.amazonaws.com/dev/invitation/1cae8143-9014-4d1a-b29b-309ee80373d8"
+          "https://91htv6ktm9.execute-api.us-east-1.amazonaws.com/dev/invitation/a3768607-75fd-4d77-a591-5b3b80de88c1"
         );
+        console.log(response.data)
         setData(response.data);
       } catch (error) {
         console.error(error);
