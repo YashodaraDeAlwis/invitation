@@ -58,7 +58,7 @@ export default async function Page({ params: { id } }) {
             30 Days to go!
           </div>
         </div>
-        <div className="text-[12px] pt-16  sm:text-4xl flex justify-center   tracking-[.25em]">
+        <div className="text-[12px] pt-10 sm:pt-16  sm:text-4xl flex justify-center   tracking-[.25em]">
           Yashodara & Harshana
         </div>
       </div>
@@ -162,9 +162,8 @@ export default async function Page({ params: { id } }) {
         <div id="gallery" className="sm:pt-20 pt-8">
           <div className="flex flex-col items-center ">
             <h1 className="sm:text-4xl text-sm sm:pb-5 pb-1">Gallery</h1>
-            <div className="flex flex-col items-center">
-              <div className="h-0.5 bg-white w-44 flex justify-center "></div>
-            </div>
+
+            <div className="h-0.5 bg-white w-44 flex justify-center "></div>
           </div>
           <div className="grid sm:grid-cols-3 grid-cols-2 sm:gap-4 gap-0 pb-0 scale-75">
             <img
@@ -213,7 +212,7 @@ export default async function Page({ params: { id } }) {
         Login
       </a> */}
         </div>
-        <h1 className="p-3 text-[5px] w-full sm:text-sm bg-orange-50 flex justify-center font-dancing-script normal-case">
+        <h1 className="p-3 text-[10px] w-full sm:text-sm bg-orange-50 flex justify-center font-dancing-script normal-case">
           All rights reserved by Harshana & Yashodara
         </h1>
       </div>
