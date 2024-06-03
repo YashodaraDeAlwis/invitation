@@ -27,8 +27,6 @@ export default async function Page({ params: { id } }) {
   const { data } = await fetchData(id);
 
   return (
-  
-
     <div className="font-gilda-display  uppercase bg-texture bg-cover bg-fixed bg-opacity-50">
       <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Gilda+Display&display=swap"
@@ -46,47 +44,45 @@ export default async function Page({ params: { id } }) {
         </div>
 
         <div className="tracking-[.15em] uppercase ">
-      
-          <div className="text-[12px]  pb-2 sm:text-xl pr-3  font-semibol pt-1 flex justify-center ">
-            26th of June 2024
+          <div className="text-[10px] flex justify-center font-semibold  pb-2 sm:text-xl pt-1 ">
+            On 26th of June 2024
           </div>
-          <div className="text-[10px] flex justify-center font-semibold  pb-4 sm:text-xl pl-3 pt-1 ">
-            Suriya Resort Kammala
+          <div className="text-[8px] flex justify-center font-semibold  pb-4 sm:text-[15px] pt-1 ">
+            At Suriya Resort Kammala
           </div>
           <div className="flex justify-center">
             {" "}
-            <div className="sm:w-20 w-6 bg-slate-400 h-0.5  "></div>
+            <div className=" sm:w-44 w-14 bg-slate-400 h-0.5  "></div>
           </div>
           <div className="text-[12px] pt-5  sm:text-xl uppercase flex justify-center">
             30 Days to go!
           </div>
         </div>
-        <div className="text-[12px] sm:pb-2 pb-2 pt-10   sm:text-4xl flex justify-center   tracking-[.25em]">
+        <div className="text-[12px] pt-16  sm:text-4xl flex justify-center   tracking-[.25em]">
           Yashodara & Harshana
         </div>
-    
       </div>
 
       <div className=" tracking-[.10em] sm:pt-1 flex flex-col items-center">
         <div id="invitation">
-          <h1 className="text-[8px] w-full  sm:text-xl pt-10 sm:pb-5 pb-3 sm:px-48 pr-1  text-center justify-center">
+          <h1 className="text-[10px] w-full  sm:text-xl pt-5 sm:pb-5 pb-3 sm:px-48 pr-1  text-center justify-center">
             Together with their parents Mr.Sumith De Alwis & Mrs. Chandima
             Ganhewage And Mr. Darmadasa Rajapaksha & Mrs. Dayantha priyangani
           </h1>
 
-          <h1 className="text-[8px] pb-5 sm:text-xl sm:px-48 pl-5 text-center justify-center">
+          <h1 className="text-[10px] pb-5 sm:text-xl sm:px-48 pl-5 text-center justify-center">
             Request the honor of your presence of{" "}
           </h1>
           <div className="text-center justify-center flex flex-col items-center ">
             <div className="relative inline-block">
-              <h1 className="relative z-10 sm:text-4xl font-semibold text-[15px] font-dancing-script text-[#daa520] normal-case pb-3">
+              <h1 className="relative z-10 sm:text-4xl font-semibold text-[20px] font-dancing-script text-[#daa520] normal-case pb-3">
                 {data.invitor_name_for_card}
               </h1>
             </div>
             <div className="h-0.5 bg-black opacity-20 w-2/3"></div>
           </div>
 
-          <h1 className="text-[8px] px-5 sm:px-36 pt-5 pb-2 sm:text-xl text-center justify-center text-black  opacity-50">
+          <h1 className="text-[10px] px-5 sm:px-36 pt-5 pb-2 sm:text-xl text-center justify-center text-black  opacity-50">
             {" "}
             to exchange vows and step into this beautiful journey of love and
             togetherness
@@ -104,15 +100,14 @@ export default async function Page({ params: { id } }) {
         </div>
 
         <div className="relative">
-       
           <img
             className=" w-full "
             src="/images/background.JPG"
             alt="landing image"
           />
-       
+
           <div className="absolute inset-0 bg-black opacity-50  w-full "></div>
-    
+
           <div className="absolute inset-0 flex items-center  text-white  pt-5">
             <div>
               <h1 className=" sm:text-xl text-[7px] pb-5 sm:pr-50 normal-case px-16 justify-center text-center">
@@ -125,12 +120,12 @@ export default async function Page({ params: { id } }) {
             </div>
           </div>
         </div>
-   <div className="flex flex-col items-center pt-5">
-        <h1 id="schedule" className="sm:text-4xl text-xl sm:pt-10 pt-10">
-          Location
-        </h1>
-        <div className="h-0.5 bg-white w-44 flex justify-center "></div>
-      </div>
+        <div className="flex flex-col items-center pt-5">
+          <h1 id="schedule" className="sm:text-4xl text-xl sm:pt-10 pt-10">
+            Location
+          </h1>
+          <div className="h-0.5 bg-white w-44 flex justify-center "></div>
+        </div>
         <div className="flex justify-center pt-10">
           <div className="sm:pr-5 pr-2 pl-2 sm:text-2xl text-[8px] pt-3">
             Grand Ball Room
