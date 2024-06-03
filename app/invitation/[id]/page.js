@@ -146,12 +146,7 @@ export default async function Page({ params: { id } }) {
           </a>
         </div>
         <div id="schedule">
-          {/* <div className="flex flex-col items-center pt-5">
-        <h1 id="schedule" className="sm:text-4xl text-2xl sm:pt-10 pt-10">
-          Schedule
-        </h1>
-        <div className="h-0.5 bg-white w-44 flex justify-center "></div>
-      </div> */}
+
           <img
             className="center  pt-5 sm:pl-72 sm:pr-72 pr-10 pl-10 scale-100"
             src="/images/shedule.png"
@@ -198,7 +193,7 @@ export default async function Page({ params: { id } }) {
             />
           </div>
         </div>
-        <div className="justify-center flex sm:text-lg text-[5px]">
+        <div className="justify-center flex sm:text-lg text-[10px]">
           <a href="#invitation" className="p-3 ">
             Invitation
           </a>
@@ -212,7 +207,7 @@ export default async function Page({ params: { id } }) {
         Login
       </a> */}
         </div>
-        <h1 className="p-3 text-[10px] w-full sm:text-sm bg-orange-50 flex justify-center font-dancing-script normal-case">
+        <h1 className="p-3 text-[8px] w-full sm:text-sm bg-orange-50 flex justify-center font-dancing-script normal-case">
           All rights reserved by Harshana & Yashodara
         </h1>
       </div>
