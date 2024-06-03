@@ -12,7 +12,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
   const id = params.id;
   const inv = await fetchData(id);
 
-  const title = `Y&H Wedding Invitation | ${inv.data.invitor_name_for_card}`;
+  const title = `Y&H Wedding Invitation | 26th June 2024`;
   const description = `Save the Date | ${inv.data.invitor_name_for_card}`;
 
   return {
