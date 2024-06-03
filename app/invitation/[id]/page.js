@@ -6,6 +6,13 @@ async function fetchData(id) {
   ).then((res) => res.json());
   return inv;
 }
+function calculateDaysUntil(date) {
+  const today = new Date();
+  const targetDate = new Date(date);
+  const timeDiff = targetDate - today;
+  const daysDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+  return daysDiff;
+}
 
 export async function generateMetadata({ params, searchParams }, parent) {
   const id = params.id;
@@ -13,6 +20,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
 
   const title = `Y&H Wedding Invitation | 26th June 2024`;
   const description = `Save the Date | ${inv.data.invitor_name_for_card}`;
+
 
   return {
     title,
@@ -55,7 +63,7 @@ export default async function Page({ params: { id } }) {
             <div className=" sm:w-44 w-14 bg-slate-400 h-0.5  "></div>
           </div>
           <div className="text-[10px] pt-5  sm:text-xl uppercase flex justify-center">
-            22 Days to go!
+           {calculateDaysUntil('2024-06-26')} Days to go!
           </div>
         </div>
         <div className="text-[12px] pt-10 sm:pt-16  sm:text-4xl flex justify-center   tracking-[.25em]">
