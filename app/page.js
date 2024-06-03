@@ -6,6 +6,7 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Gilda+Display&display=swap"
           rel="stylesheet"
         />
+        
       <div className="tracking-[.15em] uppercase pt-10 ">
         <div className="text-[12px] sm:pb-5 pb-2 font-dancing-script sm:text-4xl flex justify-center tracking-[.25em]">
           Yashodara & Harshana
