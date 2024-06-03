@@ -75,7 +75,7 @@ export default async function Page({ params: { id } }) {
           </h1>
           <div className="text-center justify-center flex flex-col items-center ">
             <div className="relative inline-block">
-              <h1 className="relative z-10 sm:text-4xl font-semibold text-[20px] font-dancing-script text-[#daa520] normal-case pb-3">
+              <h1 className="relative z-10 sm:text-4xl font-extrabold text-[22px] font-dancing-script text-[#daa520] normal-case pb-2">
                 {data.invitor_name_for_card}
               </h1>
             </div>
