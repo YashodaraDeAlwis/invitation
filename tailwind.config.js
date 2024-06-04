@@ -20,9 +20,36 @@ module.exports = {
           light: "#fff",
           dark: "#fff"
         }
-      }
-      
+      },
+      keyframes: {
+        pulse: {
+          '0%, 100%': { transform: 'scale(0.75)' },
+          '50%': { transform: 'scale(0.85)' },
+        },
+        expand: {
+          '0%': { transform: 'translate(-50%, -50%) scale(0)' },
+          '100%': { transform: 'translate(-50%, -50%) scale(1)' },
+        },
+      },
+      animation: {
+        pulse: 'pulse 1.5s infinite',
+        expand: 'expand 0.5s',
+      },
+      transitionProperty: {
+        'all': 'all',
+      },
+      transitionTimingFunction: {
+        'ease': 'ease',
+      },
+      transitionDuration: {
+        '300': '300ms',
+      },
+      transformOrigin: {
+        'center': 'center',
+      },
     },
+      
+  
   },
   plugins: [],
 };

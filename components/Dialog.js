@@ -90,16 +90,15 @@ export default function FormDialog( { id }) {
          Click the below button and confirm your participation
         </h1>
         <button
-          onClick={handleClickOpen}
-          className="border border-black sm:pr-20 pr-3 pt-1 pb-1 pl-2 sm:pl-20 rounded text-smd font-m text-black"
-        >
-          RSVP
-          <TbHandClick className="ml-3 scale-75" />
-          {/* <div className="text-center mt-10">
-      <span className="text-sm text-gray-500">Scroll down for more!</span>
-      <TbHandClick className="ml-3 scale-75" />
-    </div> */}
-        </button>
+      onClick={handleClickOpen}
+      className="relative overflow-hidden border border-black sm:pr-20 pr-3 pt-1 pb-1 pl-2 sm:pl-20 rounded text-smd font-m text-black transition-all duration-300 ease transform hover:bg-gray-200 hover:scale-105"
+    >
+      RSVP
+      <TbHandClick className="ml-4 scale-90 animate-pulse" />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute top-1/2 left-1/2 w-[300%] h-[300%] bg-black bg-opacity-5 rounded-full transform scale-0 transition-transform duration-500 ease-out group-hover:scale-100"></div>
+      </div>
+    </button>
       </div>
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle className="font-gilda-display">
