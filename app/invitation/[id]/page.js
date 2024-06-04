@@ -108,7 +108,11 @@ export default async function Page({ params: { id } }) {
           <div className="h-0.5 bg-black sm:w-44 w-28 flex justify-center opacity-50 "></div>
           <h1 className="pb-10 sm:text-2xl text-md pt-3">26.06.2024</h1>
         </div>
-
+        {/* <div className="flex justify-center mt-10">
+  <svg className="w-6 h-6 animate-pulse" viewBox="0 0 20 20" fill="currentColor">
+    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 010 1.414l10 10a1 1 0 01-1.414 1.414L4 8.707l-1.293 1.293a1 1 0 01-1.414-1.414z" clip-rule="evenodd" />
+  </svg>
+</div> */}
         <div className="relative">
           <img
             className=" w-full "

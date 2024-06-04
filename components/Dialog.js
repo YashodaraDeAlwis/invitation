@@ -92,6 +92,10 @@ export default function FormDialog( { id }) {
         >
           RSVP
           <TbHandClick className="ml-3 scale-75" />
+          {/* <div className="text-center mt-10">
+      <span className="text-sm text-gray-500">Scroll down for more!</span>
+      <TbHandClick className="ml-3 scale-75" />
+    </div> */}
         </button>
       </div>
       <Dialog open={open} onClose={handleClose}>
@@ -100,8 +104,7 @@ export default function FormDialog( { id }) {
         </DialogTitle>
         <DialogContent>
           <DialogContentText className="font-gilda-display">
-            We truly appreciate your presence. Please RSVP at the end of May if
-            possible.
+            We truly appreciate your presence. Please RSVP on or before the 16th of June.
           </DialogContentText>
           {data && (
             <form onSubmit={handleSubmit}>
