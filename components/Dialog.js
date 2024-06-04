@@ -86,6 +86,9 @@ export default function FormDialog( { id }) {
   return (
     <React.Fragment>
       <div className="pt-10 pb-10 text-center justify-center">
+      <h1 className="p-3 text-[10px] w-full sm:text-sm flex justify-center test-semibold  normal-case">
+         Click the below button and confirm your participation
+        </h1>
         <button
           onClick={handleClickOpen}
           className="border border-black sm:pr-20 pr-3 pt-1 pb-1 pl-2 sm:pl-20 rounded text-smd font-m text-black"
