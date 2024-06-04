@@ -88,7 +88,7 @@ export default function FormDialog( { id }) {
       <div className="pt-10 pb-10 text-center justify-center">
         <button
           onClick={handleClickOpen}
-          className="border border-black sm:pr-20 pr-3 pt-1 pb-1 pl-3 sm:pl-20 rounded text-smd font-m text-black"
+          className="border border-black sm:pr-20 pr-3 pt-1 pb-1 pl-2 sm:pl-20 rounded text-smd font-m text-black"
         >
           RSVP
           <TbHandClick className="ml-3 scale-75" />
