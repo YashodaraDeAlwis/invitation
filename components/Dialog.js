@@ -7,11 +7,12 @@ import DialogTitle from "@mui/material/DialogTitle";
 import { TbHandClick } from "react-icons/tb";
 import axios from "axios";
 
-export default function FormDialog() {
+export default function FormDialog( { id }) {
   const [data, setData] = useState(null);
   const [message, setMessage] = useState("");
   const [mainStatus, setMainStatus] = useState("Pending");
   const [status, setStatus] = useState("Pending");
+  const [invitationId, setinvidationId] = useState("");
   const [isPending, setIsPending] = useState(false);
   const [open, setOpen] = React.useState(false);
 
@@ -27,15 +28,15 @@ export default function FormDialog() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://91htv6ktm9.execute-api.us-east-1.amazonaws.com/dev/invitation/a3768607-75fd-4d77-a591-5b3b80de88c1"
+          `https://91htv6ktm9.execute-api.us-east-1.amazonaws.com/dev/invitation/${id}`
         );
 
         console.log(response.data)
         setData(response.data);
-       
         setMainStatus(response.data.data.invitor_main_name.rspv_status);
         setStatus(response.data.data.other_invitor[0].rspv_status);
-        
+        console.log(response.data.data.invitation_id)
+        setinvidationId(response.data.data.invitation_id);
       } catch (error) {
         console.error(error);
       }
@@ -50,36 +51,19 @@ export default function FormDialog() {
 
     const updatedData = data.data
     updatedData.invitor_main_name.rspv_status = mainStatus
-    updatedData.other_invitor[0].rspv_status = status
-
-    // const updatedData = {
-    //   invitation_id: "665de4535c1bbad6a691a3cd",
-    //   invitation_count: 3,
-    //   invitor_name_for_card: "Aminda aiya and Bavi akka",
-    //   invitor_main_name: {
-    //     invitor_id: "665de4535c1bbad6a691a3cb",
-    //     invitor_name: "Aminda aiya",
-    //     rspv_status: mainStatus,
-    //     invitor_type: "main",
-    //   },
-    //   other_invitor: [
-    //     {
-    //       invitor_id: "665de4535c1bbad6a691a3cc",
-    //       invitor_name: "Bavi akka",
-    //       rspv_status: status,
-    //       invitor_type: "sub",
-    //     },
-      
-    //   ],
-    // };
-
+    updatedData.invitation_id = invitationId
+    updatedData.other_invitor.forEach((invitor) => {
+      invitor.rspv_status = status;
+    });
+    
+   
+ 
     const headers = {
-      "Content-Type": "application/json", // Example header
-      // Add more headers if needed
+      "Content-Type": "application/json", 
     };
     axios
       .put(
-        "https://91htv6ktm9.execute-api.us-east-1.amazonaws.com/dev/invitation/665de4535c1bbad6a691a3cd",
+        `https://91htv6ktm9.execute-api.us-east-1.amazonaws.com/dev/invitation/${invitationId}`,
         updatedData,
         { headers }
       )
