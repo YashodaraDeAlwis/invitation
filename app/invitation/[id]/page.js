@@ -223,7 +223,7 @@ export default async function Page({ params: { id } }) {
         Login
       </a> */}
         </div>
-        <h1 className="p-3 text-[8px] w-full sm:text-sm bg-orange-50 flex justify-center font-dancing-script normal-case">
+        <h1 className="p-3 text-[8px] w-full sm:text-sm bg-orange-50 flex justify-center  normal-case">
           All rights reserved by Harshana & Yashodara
         </h1>
       </div>
