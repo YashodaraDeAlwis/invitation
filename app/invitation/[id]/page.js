@@ -130,12 +130,12 @@ export default async function Page({ params: { id } }) {
           </div>
         </div>
         <div className="flex flex-col items-center pt-5">
-          <h1 id="schedule" className="sm:text-4xl text-xl sm:pt-10 pt-10">
+          <h1 id="schedule" className="sm:text-4xl text-xl sm:pt-10 pt-5">
             Location
           </h1>
           <div className="h-0.5 bg-white w-44 flex justify-center "></div>
         </div>
-        <div className="flex justify-center pt-10">
+        <div className="flex justify-center pt-5 sm:pt-10">
           <div className="sm:pr-5 pr-2 pl-2 sm:text-2xl text-[8px] pt-3">
             Grand Ball Room
           </div>
