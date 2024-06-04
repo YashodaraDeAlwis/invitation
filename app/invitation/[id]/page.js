@@ -88,7 +88,7 @@ export default async function Page({ params: { id } }) {
                 {data.invitor_name_for_card}
               </h1>
             </div>
-            <div className="h-0.5 bg-black opacity-20 w-2/3"></div>
+            <div className="h-0.5 bg-black opacity-20 w-full"></div>
           </div>
 
           <h1 className="text-[10px] px-5 sm:px-36 pt-5 pb-2 sm:text-xl text-center justify-center text-black  opacity-50">
