@@ -68,7 +68,7 @@ export default async function Page({ params: { id } }) {
           </div>
         </div>
         <div id="invitation">
-        <div className="text-[12px] pt-10 sm:pt-16  sm:text-4xl flex justify-center   tracking-[.25em]">
+        <div className="text-[12px]  font-semibold pt-10 sm:pt-16  sm:text-4xl flex justify-center   tracking-[.25em]">
           Yashodara & Harshana
         </div>
       </div>
