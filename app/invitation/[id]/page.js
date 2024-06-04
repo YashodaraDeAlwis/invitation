@@ -97,8 +97,11 @@ export default async function Page({ params: { id } }) {
             to exchange vows and step into this beautiful journey of love and
             togetherness
           </h1>
-
+         
           <FormDialog id={id} />
+          <h1 className="p-3 text-[5px] w-full sm:text-sm flex justify-center  normal-case">
+         Click the above button and confirm your participation
+        </h1>
         </div>
         <div className="flex flex-col items-center">
           <h1 className="sm:text-3xl text-md sm:pt-10  pb-3 font-dancing-script ">
