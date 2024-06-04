@@ -66,13 +66,14 @@ export default async function Page({ params: { id } }) {
            {calculateDaysUntil('2024-06-26')} Days to go!
           </div>
         </div>
+        <div id="invitation">
         <div className="text-[12px] pt-10 sm:pt-16  sm:text-4xl flex justify-center   tracking-[.25em]">
           Yashodara & Harshana
         </div>
       </div>
 
       <div className=" tracking-[.10em] sm:pt-1 flex flex-col items-center">
-        <div id="invitation">
+     
           <h1 className="text-[10px] w-full  sm:text-xl pt-5 sm:pb-5 pb-3 sm:px-48 pr-1  text-center justify-center">
             Together with their parents Mr.Sumith De Alwis & Mrs. Chandima
             Ganhewage And Mr. Darmadasa Rajapaksha & Mrs. Dayantha priyangani
