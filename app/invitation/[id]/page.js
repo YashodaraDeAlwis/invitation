@@ -133,9 +133,9 @@ export default async function Page({ params: { id } }) {
           <h1 id="schedule" className="sm:text-4xl text-xl sm:pt-10 pt-5">
             Location
           </h1>
-          <div className="h-0.5 bg-white w-44 flex justify-center "></div>
+          <div className="h-0.5 bg-white w-48 flex justify-center "></div>
         </div>
-        <div className="flex justify-center pt-5 sm:pt-10">
+        <div className="flex justify-center pt-3 sm:pt-10">
           <div className="sm:pr-5 pr-2 pl-2 sm:text-2xl text-[8px] pt-3">
             Grand Ball Room
           </div>
@@ -144,7 +144,7 @@ export default async function Page({ params: { id } }) {
             Suriya resort Kammala
           </div>
         </div>
-        <div className="sm:pr-5 pr-2 pl-2 sm:text-lg text-[7px] pt-2 pb-5 flex justify-center lowercase">
+        <div className="sm:pr-5 pr-2 pl-2 sm:text-lg text-[7px] pt-3 pb-5 flex justify-center lowercase">
           <a
             href="https://www.google.com/maps/dir//8R2R%2B42X,+Kammala+Rd,+Kammala/@7.3003554,79.7577163,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ae2e997a664e917:0x8177657b30a5aaaa!2m2!1d79.840144!2d7.3003702?entry=ttu"
             target="_blank"
