@@ -176,7 +176,7 @@ export default async function Page({ params: { id } }) {
 
             <div className="h-0.5 bg-white w-44 flex justify-center "></div>
           </div>
-          <div className="grid sm:grid-cols-3 grid-cols-2 sm:gap-4 gap-0 pb-0 scale-75">
+          <div className="grid sm:grid-cols-3 grid-cols-2 sm:gap-4 px-20 pt-3">
             <img
               className="center sm:scale-y-80 scale-95"
               src="/images/galleryone.jpg"
