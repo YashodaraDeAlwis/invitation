@@ -7,7 +7,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import { TbHandClick } from "react-icons/tb";
 import axios from "axios";
 
-export default function FormDialog( { id }) {
+export default function FormDialog({ id }) {
   const [data, setData] = useState(null);
   const [message, setMessage] = useState("");
   const [mainStatus, setMainStatus] = useState("Pending");
@@ -31,11 +31,12 @@ export default function FormDialog( { id }) {
           `https://91htv6ktm9.execute-api.us-east-1.amazonaws.com/dev/invitation/${id}`
         );
 
-        console.log(response.data)
         setData(response.data);
         setMainStatus(response.data.data.invitor_main_name.rspv_status);
-        setStatus(response.data.data.other_invitor[0].rspv_status);
-        console.log(response.data.data.invitation_id)
+        if (response.data.data.other_invitor.length > 0) {
+          setStatus(response.data.data.other_invitor[0].rspv_status);
+        }
+
         setinvidationId(response.data.data.invitation_id);
       } catch (error) {
         console.error(error);
@@ -49,17 +50,18 @@ export default function FormDialog( { id }) {
     e.preventDefault(); //prevent refreshing while submitting
     setIsPending(true);
 
-    const updatedData = data.data
-    updatedData.invitor_main_name.rspv_status = mainStatus
-    updatedData.invitation_id = invitationId
-    updatedData.other_invitor.forEach((invitor) => {
-      invitor.rspv_status = status;
-    });
-    
-   
+    const updatedData = data.data;
+    updatedData.invitor_main_name.rspv_status = mainStatus;
+    updatedData.invitation_id = invitationId;
  
+    if (updatedData.other_invitor.length > 0) {
+      updatedData.other_invitor.forEach((invitor) => {
+        invitor.rspv_status = status;
+      });
+    }
+
     const headers = {
-      "Content-Type": "application/json", 
+      "Content-Type": "application/json",
     };
     axios
       .put(
@@ -72,7 +74,7 @@ export default function FormDialog( { id }) {
         console.log("PUT request successful:", response.data);
         console.log({ updatedData });
         console.log(data.data.invitor_main_name.invitor_name);
-        console.log(data.data.invitation_id);
+        console.log("Invitation id", data.data.invitation_id);
         setIsPending(false);
         setOpen(false); // Close the dialog after successful submission
       })
@@ -86,19 +88,19 @@ export default function FormDialog( { id }) {
   return (
     <React.Fragment>
       <div className="pt-7 pb-10 text-center justify-center">
-      <h1 className="p-3 text-[10px] w-full sm:text-sm flex justify-center test-semibold  normal-case">
-         Click the below button and confirm your participation
+        <h1 className="p-3 text-[10px] w-full sm:text-sm flex justify-center test-semibold  normal-case">
+          Click the below button and confirm your participation
         </h1>
         <button
-      onClick={handleClickOpen}
-      className="relative overflow-hidden border border-black sm:pr-20 pr-3 pt-1 pb-1 pl-2 sm:pl-20 rounded text-smd font-m text-black transition-all duration-300 ease transform hover:bg-gray-200 hover:scale-105"
-    >
-      RSVP
-      <TbHandClick className="ml-4 scale-95 animate-pulse" />
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="absolute top-1/2 left-1/2 w-[300%] h-[300%] bg-black bg-opacity-5 rounded-full transform scale-0 transition-transform duration-500 ease-out group-hover:scale-100"></div>
-      </div>
-    </button>
+          onClick={handleClickOpen}
+          className="relative overflow-hidden border border-black sm:pr-20 pr-3 pt-1 pb-1 pl-2 sm:pl-20 rounded text-smd font-m text-black transition-all duration-300 ease transform hover:bg-gray-200 hover:scale-105"
+        >
+          RSVP
+          <TbHandClick className="ml-4 scale-95 animate-pulse" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute top-1/2 left-1/2 w-[300%] h-[300%] bg-black bg-opacity-5 rounded-full transform scale-0 transition-transform duration-500 ease-out group-hover:scale-100"></div>
+          </div>
+        </button>
       </div>
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle className="font-gilda-display">
@@ -106,7 +108,8 @@ export default function FormDialog( { id }) {
         </DialogTitle>
         <DialogContent>
           <DialogContentText className="font-gilda-display">
-            We truly appreciate your presence. Please RSVP on or before the 16th of June.
+            We truly appreciate your presence. Please RSVP on or before the 16th
+            of June.
           </DialogContentText>
           {data && (
             <form onSubmit={handleSubmit}>
