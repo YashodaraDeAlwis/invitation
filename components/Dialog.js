@@ -108,7 +108,7 @@ export default function FormDialog({ id }) {
         </DialogTitle>
         <DialogContent>
           <DialogContentText className="font-gilda-display">
-            We truly appreciate your presence. Please RSVP on or before the 16th
+            We truly appreciate your presence. Please RSVP on or before the 22nd
             of June.
           </DialogContentText>
           {data && (
